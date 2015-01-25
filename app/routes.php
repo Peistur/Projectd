@@ -13,5 +13,7 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('test');
 });
+
+Route::get('/', array( 'as' => 'home', 'uses' => 'HomeController@test' ) );
